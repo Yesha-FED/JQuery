@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mouse Event in JQuery</h1>
+    <hr />
+    <div class="box">Mouse Event in JQuery</div>
+
+    <!-- jQuery -->
+
+    <script src="../../JQuery/jquery-3.7.1.min.js"></script>
+
+    <!--Script in which jquery CSS is including  -->
+
+    <script>
+      $("body").css({
+        backgroundColor: "skyblue",
+        textAlign: "center",
+      });
+      $("h1").css({
+        fontSize: "50px",
+        color: "maroon",
+      });
+      $("button").css({
+        fontSize: "20px",
+        color: "yellow",
+        backgroundColor: "magenta",
+        padding: "10px 30px",
+        borderRadius: "20px",
+      });
+      $(".box").css({
+        fontSize: "30px",
+        color: "white",
+        backgroundColor: "green",
+        padding: "10px 30px",
+        margin: "10px 30px",
+        borderRadius: "20px",
+        height: "200px",
+      });
+    </script>
+
+    <!-- script -->
+
+    <script>
+      $(document).ready(function () {
+        // click
+
+        $(".box").click(function () {
+          $(".box").css({backgroundColor: 'teal', color: 'khaki'});
+        });
+
+        // Double Click
+
+        $(".box").dblclick(function () {
+          $(".box").css({backgroundColor: 'crimson', color: 'white'});
+
+        });
+
+
+        $(".box").mouseenter(function () {
+          $(".box").css({backgroundColor: 'black', color: 'white'});
+
+        });
+
+
+        $(".box").mouseleave(function () {
+          $(".box").css({backgroundColor: 'brown', color: 'white'});
+
+        });
+
+
+        $(".box").mousedown(function () {
+          $(".box").css({backgroundColor: 'pink', color: 'black'});
+
+        });
+
+
+        $(".box").mouseup(function () {
+          $(".box").css({backgroundColor: 'blue', color: 'white'});
+        });
+      });
+    </script>
+  </body>
+</html>

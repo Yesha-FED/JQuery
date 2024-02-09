@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Ancestor</title>
+</head>
+<body>
+    <h1>JQuery Ancestor</h1>
+    <div class="great-grand-parent">Great-Grand-Parent
+        <div class="grand-parent">Grand-Parent
+            <div class="parent">Parent
+                <div class="child">Child One</div>
+                <div class="child">Child Two</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery  -->
+
+    <script src="../../JQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Script in which jquery CSS is including -->
+
+    <script>
+        $("*").css({
+            backgroundColor: "white",
+            textAlign: "center",
+            margin: "40px",
+            fontsize: "40px",
+        });
+    </script>
+
+    <!-- script ready -->
+
+    <script>
+        $(document).ready(function() {
+
+            // patents
+
+            $(".child").parent().css({border: "4px solid lime"});
+            $(".parent").parent().css({border: "4px solid maroon"});
+            $(".grand-parent").parent().css({border: "4px solid green"});
+            $(".great-grand-parent").parent().css({border: "4px solid black"});
+            $("body").parent().css({border: "4px solid purple"});
+        });
+    </script>
+</body>
+</html>

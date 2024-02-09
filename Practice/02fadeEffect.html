@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hide Show Effect In jQuery</h1>
+    <hr />
+    <button class="btnfadein">Fade-In</button>
+    <button class="btnfadeout">Fade-Out</button>
+    <button class="btnfadetoggle">Fade Toggle</button>
+    <button class="btnfadeto">Fade To</button>
+    <hr />
+    <div class="box">It occur with the help of CSS in JQuery</div>
+
+    <!-- jQuery -->
+
+    <script src="../JQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Script in which jquery CSS is including   -->
+
+    <script>
+      $("body").css({
+        backgroundColor: "skyblue",
+        textAlign: "center",
+      });
+      $("h1").css({
+        fontSize: "50px",
+        color: "maroon",
+      });
+      $("button").css({
+        fontSize: "20px",
+        color: "yellow",
+        backgroundColor: "magenta",
+        padding: "10px 30px",
+        borderRadius: "20px",
+      });
+      $(".box").css({
+        fontSize: "30px",
+        color: "white",
+        backgroundColor: "green",
+        padding: "10px 30px",
+        margin: "10px 30px",
+        borderRadius: "20px",
+      });
+    </script>
+
+    <!-- script -->
+
+    <script>
+      $(document).ready(function () {
+        // Fade In 
+
+        $(".btnfadein").click(function () {
+          $(".box").fadeIn();
+        });
+
+        // Fade Out
+
+        $(".btnfadeout").click(function () {
+          $(".box").fadeOut();
+        });
+
+        // Fade Toggle
+
+        $(".btnfadetoggle").click(function () {
+          $(".box").fadeToggle();
+        });
+
+        // fade to
+
+        $(".btnfadeto").click(function (){
+            $(".box").fadeTo(3000,0.5);
+        });
+      });
+    </script>
+</body>
+</html>
